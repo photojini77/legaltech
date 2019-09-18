@@ -6,7 +6,20 @@
   box-sizing: border-box;
 }
 
-body{
+
+
+body {
+    background: rgb(243, 244, 245);
+    height: 100%;
+    color: rgb(100, 108, 127);
+    line-height: 1.4rem;
+    font-family: Roboto, "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+.login-main {
   min-height: 100vh;
   /* background-image: linear-gradient(120deg,#3498db,#8e44ad); */
   background:url(../img/law.jpg) no-repeat;
@@ -95,3 +108,9 @@ body{
   text-align: center;
   font-size: 13px;
 }
+
+
+
+
+
+

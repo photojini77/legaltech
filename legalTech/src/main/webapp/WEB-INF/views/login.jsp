@@ -16,12 +16,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" href="./assets/plugins/jquery-ui/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/plugins/jquery.js"></script>
+    <script src="./assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./assets/js/build.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 
 </head>
-<body>
+<body class="login-main">
 	<form action="index.html" class="login-form">
         <h1>Login</h1>
 
