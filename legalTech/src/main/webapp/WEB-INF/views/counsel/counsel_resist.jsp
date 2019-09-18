@@ -29,12 +29,13 @@
     
 </head>
 <body>
-<form id="mainform" name="mainform" method="post" enctype="multipart/form-data">
 
 <div class="wrapper">
-	
+
+<form id="mainform" name="mainform" method="post" action="">
 	<jsp:include page="../common/topMenu.jsp" flush="false" />
-	
+</form>
+<form id="mainform2" name="mainform2" method="post" enctype="multipart/form-data">
 	<div class="container">
 	    <div class="sub">
 	        <div class="con1">
@@ -618,7 +619,7 @@
 	    	
 		    	if(confirm("저장하시겠습니까?")) {
 					
-					var form = $('#mainform')[0];
+					var form = $('#mainform2')[0];
 			         var formData = new FormData(form);
 			             $.ajax({
 			                type: 'POST',
@@ -641,8 +642,8 @@
 	</div>
 
 <jsp:include page="../common/footer.jsp" flush="false" />
+</form>
 	
 </div>
-</form>
 </body>
 </html>
