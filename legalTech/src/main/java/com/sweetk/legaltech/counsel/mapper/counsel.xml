@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.sweetk.legaltech.counsel.mapper.CounselMapper">
+	
+
+	<select id="counsel_company_info" parameterType="String" resultType="MainVo">
+		
+		SELECT 
+			company_id,
+		    company_name,
+		    ceo_name,
+		    ceo_resist_no,
+		    resist_no,
+		    build_dt,
+		    company_address,
+		    factory_address,
+		    homepage,
+		    email,
+		    main_job,
+		    main_product,
+		    indu_prt_cd,
+		    sell_amt,
+		    emp_cnt,
+		    recent_counsel_yn,
+		    manage_part,
+		    manager_level,
+		    manage_name,
+		    manage_phone,
+		    manage_email,
+		    bigo,
+		    appl_company,
+		    appl_ceo_name,
+		    sign_file_nm,
+		    sign_org_file_nm,
+		    reg_dt
+		FROM lt_company
+		WHERE
+			company_id = #{0}
+		
+	</select>
+	
+	<insert id="company_info_save" parameterType="map">
+		UPDATE legaltech.lt_company
+		SET
+			company_name = #{company_name},
+			ceo_name = #{owner_name},
+			ceo_resist_no = concat(#{owner_id1},'-',#{owner_id2}),
+			resist_no = concat(#{company_id1},'-',#{company_id2},'-',#{company_id3}),
+			build_dt = #{birth},
+			company_address = #{company_addr},
+			factory_address = #{factory_addr},
+			homepage = #{homepage},
+			email = concat(#{email1},'@',#{email3}),
+			main_job = #{main_job},
+			main_product = #{main_product},
+			indu_prt_cd = #{industry_cd},
+			sell_amt = #{sell_amt},
+			emp_cnt = #{employee_cnt},
+			recent_counsel_yn = #{counsel_yn},
+			manage_part = #{manager_team},
+			manager_level = #{manager_level},
+			manage_name = #{manager_name},
+			manage_phone = concat(#{manager_ph1},'-',#{manager_ph2},'-',#{manager_ph3}),
+			manage_email = concat(#{manager_em1},'@',#{manager_em3}),
+			bigo = #{bigo},
+			appl_company = #{apply_company},
+			appl_ceo_name = #{apply_ceo},
+			sign_file_nm = #{sign_file_nm},
+			sign_org_file_nm = #{sign_org_file_nm},
+			reg_dt = now()
+		WHERE company_id = #{company_id}
+	
+	</insert>
+
+
+</mapper>
