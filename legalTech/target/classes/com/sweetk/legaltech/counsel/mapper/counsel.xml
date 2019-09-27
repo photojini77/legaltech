@@ -74,6 +74,28 @@
 		WHERE company_id = #{company_id}
 	
 	</insert>
+	
+	<select id="qna_list" parameterType="String" resultType="map">
+		 SELECT 
+		 		ask_seq,
+			    appl_seq,
+			    ask_cntn,
+			    file_nm,
+			    org_file_nm,
+			     date_format(reg_dt, '%y/%m/%d %H:%i') as reg_dt,
+			    legal_id,
+			    (select legal_name from lt_legal_office b where a.legal_id = b.legal_id ) as legal_name,
+			    company_id,
+			    (select company_name from lt_company c where a.company_id = c.company_id) as company_name
+			FROM lt_counsel_ask a
+		WHERE appl_seq = #{0}
+		order by reg_dt
+	</select>
+	
+	<insert id="qna_save" parameterType="map">
+		INSERT INTO lt_counsel_ask(appl_seq, ask_cntn, file_nm, org_file_nm, reg_dt, legal_id, company_id)
+		VALUES (#{appl_seq}, #{ask_cntn}, #{file_nm}, #{org_file_nm}, now(), #{legal_id}, #{company_id})
+	</insert>
 
 
 </mapper>

@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions"  prefix="fn"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
-<input type="hidden" id="menu_no" name="menu_no"/>
+<input type="hidden" id="menu_no" name="menu_no" value=""/>
 	<header class="header">
 	    <div class="wrap d-flex">
 	        <h1 class="header__logo">
@@ -51,12 +51,14 @@
     		$('.etc__link').removeClass("etc__link--bgWhite");
     	} else {
     		$('.header').addClass("header--sub");
-    		$('.etc__link').addClass("etc__link--bgWhite");
+    		$('#etc-login').addClass("etc__link--bgWhite");
     	}
     });
     
     $('.nav__link').on('click', function(){
     	var value = $(this).attr("data-val");
+    	console.log("value  : " + value);
+    	
    		$('#menu_no').val(value);
     	if(value == "1") {
    			document.mainform.action = "counsel_resist.do";

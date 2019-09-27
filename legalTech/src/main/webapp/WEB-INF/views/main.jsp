@@ -19,14 +19,13 @@
     <script src="./assets/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="./assets/plugins/slick/slick.js"></script>
     <script src="./assets/js/build.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500|Josefin+Sans|Nanum+Pen+Script&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Josefin+Sans&display=swap" rel="stylesheet"/>
     
     <style type="text/css">
     	.slide__txt p { font-family: 'Josefin Sans', sans-serif;}
-    	.slide__txt h2 { font-family: 'Nanum Pen Script', cursive; font-size:5.0em}
+    	.slide__txt h2 { font-family: 'Nanum Gothic', sans-serif; font-size:4.5em; margin-bottom: 30px;font-weight: 600;}
+    	.board__head {cursor:pointer}
     </style>
-    
-    
 </head>
 <body>
     <script type="text/javascript" >
@@ -273,49 +272,49 @@
                 <div class="wrap">
                     <ul>
                         <li class="">
-                            <button class="board__head">Q. 어떤 서비스인가요?</button>
+                            <div class="board__head">Q. 어떤 서비스인가요?</div>
                             <div class="board__body">
                                 창업을 시작하는 사람들을 위해 법률 바우처를 제공하는 서비스입니다. 법무법인 세종이 만든 국내 유일 법률자문 지원 서비스입니다.<br/>
                                 법무부 자문료 신청 메뉴에 접속하여 절차에 따라 신청하시면 됩니다.
                             </div>
                         </li>
                         <li class="">
-                            <button class="board__head">Q. 서비스 비용은 얼마인가요?</button>
+                            <div class="board__head">Q. 서비스 비용은 얼마인가요?</div>
                             <div class="board__body">
                                 창업을 시작하는 사람들을 위해 법률 바우처를 제공하는 서비스입니다. 법무법인 세종이 만든 국내 유일 법률자문 지원 서비스입니다.<br/>
                                 법무부 자문료 신청 메뉴에 접속하여 절차에 따라 신청하시면 됩니다.
                             </div>
                         </li>
                         <li class="">
-                            <button class="board__head">Q. 서비스를 이용하려면 무엇이 필요한가요?</button>
+                            <div class="board__head">Q. 서비스를 이용하려면 무엇이 필요한가요?</div>
                             <div class="board__body">
                                 창업을 시작하는 사람들을 위해 법률 바우처를 제공하는 서비스입니다. 법무법인 세종이 만든 국내 유일 법률자문 지원 서비스입니다.<br/>
                                 법무부 자문료 신청 메뉴에 접속하여 절차에 따라 신청하시면 됩니다.
                             </div>
                         </li>
                         <li class="">
-                            <button class="board__head">Q. 서비스를 이용하려면 별도의 프로그램을 설치해야 하나요?</button>
+                            <div class="board__head">Q. 서비스를 이용하려면 별도의 프로그램을 설치해야 하나요?</div>
                             <div class="board__body">
                                 창업을 시작하는 사람들을 위해 법률 바우처를 제공하는 서비스입니다. 법무법인 세종이 만든 국내 유일 법률자문 지원 서비스입니다.<br/>
                                 법무부 자문료 신청 메뉴에 접속하여 절차에 따라 신청하시면 됩니다.
                             </div>
                         </li>
                         <li class="">
-                            <button class="board__head">Q. 본 서비스에서 활동하는 변호사는 믿을 수 있나요?</button>
+                            <div class="board__head">Q. 본 서비스에서 활동하는 변호사는 믿을 수 있나요?</div>
                             <div class="board__body">
                                 창업을 시작하는 사람들을 위해 법률 바우처를 제공하는 서비스입니다. 법무법인 세종이 만든 국내 유일 법률자문 지원 서비스입니다.<br/>
                                 법무부 자문료 신청 메뉴에 접속하여 절차에 따라 신청하시면 됩니다.
                             </div>
                         </li>
                         <li class="">
-                            <button class="board__head">Q. 스마트폰으로도 서비스를 이용할 수 있나요?</button>
+                            <div class="board__head">Q. 스마트폰으로도 서비스를 이용할 수 있나요?</div>
                             <div class="board__body">
                                 창업을 시작하는 사람들을 위해 법률 바우처를 제공하는 서비스입니다. 법무법인 세종이 만든 국내 유일 법률자문 지원 서비스입니다.<br/>
                                 법무부 자문료 신청 메뉴에 접속하여 절차에 따라 신청하시면 됩니다.
                             </div>
                         </li>
                         <li class="">
-                            <button class="board__head">Q. 해외에서도 이용할 수 있나요?</button>
+                            <div class="board__head">Q. 해외에서도 이용할 수 있나요?</div>
                             <div class="board__body">
                                 창업을 시작하는 사람들을 위해 법률 바우처를 제공하는 서비스입니다. 법무법인 세종이 만든 국내 유일 법률자문 지원 서비스입니다.<br/>
                                 법무부 자문료 신청 메뉴에 접속하여 절차에 따라 신청하시면 됩니다.

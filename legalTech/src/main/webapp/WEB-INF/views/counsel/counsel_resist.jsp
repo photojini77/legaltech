@@ -20,11 +20,11 @@
     <script src="assets/plugins/slick/slick.js"></script>
     <script src="assets/js/build.js"></script>
     <script src="assets/js/jquery-1.11.2.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Noto+Sans+KR&display=swap" rel="stylesheet" />
     
     <style type="text/css">
-    	.visual__txt h2 { font-family: 'Noto Sans KR', sans-serif; letter-spacing: 2.5px; font-size: 3.5em;}
-    	.visual__txt p { font-family:'Jua', sans-serif; }
+    	.data__fileBox span {cursor:pointer}
+    	.flex-container {justify-content: flex-start;}
+    	.sign_img {width:70px;height:70px}
     </style>
     
 </head>
@@ -64,7 +64,7 @@
 	            </div>
 	            <div class="data">
 	                <div class="wrap d-flex">
-	                    <div class="data__item data__item--complete d-flex d-column">
+	                    <div class="data__item d-flex <c:if test="${1 eq 2}">data__item--complete</c:if> d-column">
 	                        <span class="data__mark d-flex">필수</span>
 	                        <div class="data__txt">
 	                            <h3>기업현황표</h3>
@@ -79,10 +79,9 @@
 	                            <p>창업을 시작하는 사람들을 위함</p>
 	                            <div class="d-flex data__fileBox">
 	                                <label for="f1" class="data__upload data__upload--file d-flex">
-	                                    <input type="file" class="data__file blind" id="f1">
-	                                    파일 업로드
+	                                    <input type="file" class="data__file blind" id="f1" />파일 업로드
 	                                </label>
-	                                <span class="data__fileTxt text-ellipsis">중소기업확인서_스..</span>
+	                                <span class="data__fileTxt text-ellipsis" data-val=""></span>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -93,10 +92,9 @@
 	                            <p>창업을 시작하는 사람들을 위함</p>
 	                            <div class="d-flex data__fileBox">
 	                                <label for="f2" class="data__upload data__upload--file d-flex">
-	                                    <input type="file" class="data__file blind" id="f2">
-	                                    파일 업로드
+	                                    <input type="file" class="data__file blind" id="f2" />파일 업로드
 	                                </label>
-	                                <span class="data__fileTxt text-ellipsis">중소기업확인서_스..</span>
+	                                <span class="data__fileTxt text-ellipsis"></span>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -107,10 +105,9 @@
 	                            <p>창업을 시작하는 사람들을 위함</p>
 	                            <div class="d-flex data__fileBox">
 	                                <label for="f3" class="data__upload data__upload--file d-flex">
-	                                    <input type="file" class="data__file blind" id="f3">
-	                                    파일 업로드
+	                                    <input type="file" class="data__file blind" id="f3" />파일 업로드
 	                                </label>
-	                                <span class="data__fileTxt text-ellipsis">중소기업확인서_스..</span>
+	                                <span class="data__fileTxt text-ellipsis"></span>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -121,72 +118,63 @@
 	                            <p>창업을 시작하는 사람들을 위함</p>
 	                            <div class="d-flex data__fileBox">
 	                                <label for="f4" class="data__upload data__upload--file d-flex">
-	                                    <input type="file" class="data__file blind" id="f4">
-	                                    파일 업로드
+	                                    <input type="file" class="data__file blind" id="f4" />파일 업로드
 	                                </label>
-	                                <span class="data__fileTxt text-ellipsis">중소기업확인서_스..</span>
+	                                <span class="data__fileTxt text-ellipsis"></span>
 	                            </div>
 	                        </div>
 	                    </div>
-	                    <div class="data__item data__item--complete d-flex d-column">
+	                    <div class="data__item d-flex d-column">
 	                        <span class="data__mark d-flex">필수</span>
 	                        <div class="data__txt">
 	                            <h3>중소기업확인서</h3>
 	                            <p>창업을 시작하는 사람들을 위함</p>
 	                            <div class="d-flex data__fileBox">
 	                                <label for="f5" class="data__upload data__upload--file d-flex">
-	                                    <input type="file" class="data__file blind" id="f5">
-	                                    파일 업로드
+	                                    <input type="file" class="data__file blind" id="f5" />파일 업로드
 	                                </label>
-	                                <span class="data__fileTxt text-ellipsis">중소기업확인서_스..</span>
+	                                <span class="data__fileTxt text-ellipsis"></span>
 	                            </div>
 	                        </div>
 	                    </div>
 	                    <div class="data__item data__item--choice d-flex d-column">
-	                        <span class="data__mark d-flex">필수</span>
+	                        <span class="data__mark d-flex">선택</span>
 	                        <div class="data__txt">
-	                            <h3 class="d-flex">
-	                                벤처기업확인서 
+	                            <h3 class="d-flex">벤처기업확인서 
 	                                <span class="small">(해당되는 경우)</span>
 	                            </h3>
 	                            <p>창업을 시작하는 사람들을 위함</p>
 	                            <div class="d-flex data__fileBox">
 	                                <label for="f6" class="data__upload data__upload--file d-flex">
-	                                    <input type="file" class="data__file blind" id="f6">
-	                                    파일 업로드
+	                                    <input type="file" class="data__file blind" id="f6" />파일 업로드
 	                                </label>
-	                                <span class="data__fileTxt text-ellipsis">중소기업확인서_스..</span>
+	                                <span class="data__fileTxt text-ellipsis"></span>
 	                            </div>
 	                        </div>
 	                    </div>
 	                    <div class="data__item data__item--choice d-flex d-column">
-	                        <span class="data__mark d-flex">필수</span>
+	                        <span class="data__mark d-flex">선택</span>
 	                        <div class="data__txt">
-	                            <h3 class="d-flex">
-	                                법률자문 요청서
-	                            </h3>
+	                            <h3 class="d-flex">법률자문 요청서</h3>
 	                            <p>창업을 시작하는 사람들을 위함</p>
 	                            <a href="" class="data__upload d-flex">작성하기</a>
 	                        </div>
 	                    </div>
 	                    <div class="data__item data__item--site d-flex d-column">
-	                        <a  href="" class="data__site d-flex">
-	                            대법원 인터넷등기소
-	                            <img src="./assets/images/icon/site.png" alt="">
+	                        <a  href="" class="data__site d-flex"> 대법원 인터넷등기소
+	                            <img src="./assets/images/icon/site.png" alt="" />
 	                        </a>
-	                        <a  href="" class="data__site d-flex">
-	                            4대사회보험정보연계센터
-	                            <img src="./assets/images/icon/site.png" alt="">
+	                        <a  href="" class="data__site d-flex">4대사회보험정보연계센터
+	                            <img src="./assets/images/icon/site.png" alt="" />
 	                        </a>
-	                        <a  href="" class="data__site d-flex">
-	                            중소기업현황정보시스템
-	                            <img src="./assets/images/icon/site.png" alt="">
+	                        <a  href="" class="data__site d-flex">중소기업현황정보시스템
+	                            <img src="./assets/images/icon/site.png" alt="" />
 	                        </a>
 	                    </div>
 	                </div>
 	            </div>
 	            <div class="btnBox d-flex">
-	                <a href="" class="btn d-flex">다음으로</a>
+	                <a href="javascript:;" class="btn d-flex" id="go_next">다음으로</a>
 	            </div>
 	        </div>
 	    </div>
@@ -214,7 +202,7 @@
 	                                <input type="text" id="company_name" name ="company_name" placeholder="회사명 혹은 업체명을 입력해주세요." />
 	                            </div>
 	                        </div>
-	                        <div class="form__row form__row--jc d-flex">
+	                        <div class="form__row form__row--jc d-flex flex-container">
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt">대표자 성명</div>
 	                                <div class="form__input form__input--w200">
@@ -222,9 +210,7 @@
 	                                </div>
 	                            </div>
 	                            <div class="form__col d-flex">
-	                                <div class="form__txt text-center">
-	                                    대표자<br/>
-	                                    주민번호
+	                                <div class="form__txt text-center">대표자<br/>주민번호
 	                                </div>
 	                                <div class="form__inputBox d-flex">
 	                                    <div class="form__input form__input--w200">
@@ -239,9 +225,7 @@
 	                        </div>
 	                        <div class="form__row form__row--jc d-flex">
 	                            <div class="form__col d-flex">
-	                                <div class="form__txt">
-	                                    사업자등록번호<br/>
-	                                    (법인등록번호)
+	                                <div class="form__txt">사업자등록번호<br/>(법인등록번호)
 	                                </div>
 	                                <div class="form__inputBox d-flex">
 	                                    <div class="form__input form__input--w120">
@@ -260,7 +244,7 @@
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt text-center">설립년월일</div>
 	                                <div class="form__input form__input--w250">
-	                                    <input type="text" id="birth" name ="birth" maxlength="6" placeholder="YYMMDD 형태로 입력해주세요." numberOnly>
+	                                    <input type="text" id="birth" name ="birth" maxlength="6" placeholder="YYMMDD 형태로 입력해주세요." numberOnly />
 	                                </div>
 	                            </div>
 	                        </div>
@@ -268,7 +252,7 @@
 	                            <div class="form__txt">본사주소</div>
 	                            <div class="form__inputBox form__inputBox--jc d-flex">
 	                                <div class="form__input">
-	                                    <input type="text" id="company_addr" name ="company_addr" placeholder="">
+	                                    <input type="text" id="company_addr" name ="company_addr" placeholder="" />
 	                                </div>
 	                                <div class="form__btn">
 	                                    <button id="goPopup">우편번호</button>
@@ -279,7 +263,7 @@
 	                            <div class="form__txt">공장주소</div>
 	                            <div class="form__inputBox form__inputBox--jc d-flex">
 	                                <div class="form__input">
-	                                    <input type="text" id="factory_addr" name ="factory_addr" placeholder="">
+	                                    <input type="text" id="factory_addr" name ="factory_addr" placeholder="" />
 	                                </div>
 	                                <div class="form__btn">
 	                                    <button id="goPopup1">우편번호</button>
@@ -289,14 +273,14 @@
 	                        <div class="form__row d-flex">
 	                            <div class="form__txt">홈페이지</div>
 	                            <div class="form__input">
-	                                <input type="text" id="homepage" name ="homepage" placeholder="">
+	                                <input type="text" id="homepage" name ="homepage" placeholder="" />
 	                            </div>
 	                        </div>
 	                        <div class="form__row d-flex">
 	                            <div class="form__txt">이메일</div>
 	                            <div class="form__inputBox form__inputBox--jc d-flex">
 	                                <div class="form__input form__input--w240">
-	                                    <input type="text" id="email1" name ="email1" placeholder="이메일 ID를 입력해주세요.">
+	                                    <input type="text" id="email1" name ="email1" placeholder="이메일 ID를 입력해주세요." />
 	                                </div>
 	                                <span class="form__at">@</span>
 	                                <div class="form__input form__input--w240">
@@ -317,34 +301,28 @@
 	                                </div>
 	                            </div>
 	                        </div>
-	                        <div class="form__row form__row--jc d-flex">
+	                        <div class="form__row form__row--jc d-flex flex-container">
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt">주업종</div>
 	                                <div class="form__input form__input--w150">
-	                                    <input type="text" id="main_job" name ="main_job" placeholder="">
+	                                    <input type="text" id="main_job" name ="main_job" placeholder="" />
 	                                </div>
 	                            </div>
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt text-center">주생산품</div>
 	                                <div class="form__inputBox d-flex">
 	                                    <div class="form__input form__input--w150">
-	                                        <input type="text" id="main_product" name ="main_product">
+	                                        <input type="text" id="main_product" name ="main_product" />
 	                                    </div>
-	                                </div>
-	                            </div>
-	                            <div class="form__col d-flex">
-	                                <div class="form__txt text-center">
-	                                    표준산업<br/>
-	                                    분류코드
-	                                </div>
-	                                <div class="form__inputBox d-flex">
+	                                    <span class="form__txt text-center">표준산업<br/>분류코드</span>
 	                                    <div class="form__input form__input--w150">
-	                                        <input type="text" id="industry_cd" name ="industry_cd">
+	                                        <input type="text" id="industry_cd" name ="industry_cd" />
 	                                    </div>
 	                                </div>
 	                            </div>
 	                        </div>
-	                        <div class="form__row form__row--jc d-flex">
+<!--  
+	                        <div class="form__row form__row--jc d-flex flex-container">
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt">매출액</div>
 	                                <div class="form__inputBox d-flex">
@@ -357,6 +335,23 @@
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt">상시 종업원수</div>
 	                                <div class="form__inputBox d-flex">
+	                                    <div class="form__input form__input--w300">
+	                                        <input type="text" id="employee_cnt" name ="employee_cnt" placeholder="" numberOnly />
+	                                    </div>
+	                                    <span class="form__num">명</span>
+	                                </div>
+	                            </div>
+	                        </div>
+-->
+	                        <div class="form__row form__row--jc d-flex flex-container">
+	                            <div class="form__col d-flex">
+	                                <div class="form__txt">매출액</div>
+	                                <div class="form__inputBox d-flex">
+	                                    <div class="form__input form__input--w300">
+	                                        <input type="text" id="sell_amt" name ="sell_amt" placeholder="" onkeyup="javascript:format2(this)"/>
+	                                    </div>
+	                                    <span class="form__num">원</span>
+	                                	<span class="form__txt">상시 종업원수</span>
 	                                    <div class="form__input form__input--w300">
 	                                        <input type="text" id="employee_cnt" name ="employee_cnt" placeholder="" numberOnly />
 	                                    </div>
@@ -384,7 +379,7 @@
 	                <div class="form__item">
 	                    <div class="form__head">담당</div>
 	                    <div class="form__body">
-	                        <div class="form__row form__row--jc d-flex">
+	                        <div class="form__row form__row--jc d-flex flex-container">
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt">담당자 부서</div>
 	                                <div class="form__input form__input--w350">
@@ -400,7 +395,7 @@
 	                                </div>
 	                            </div>
 	                        </div>
-	                        <div class="form__row form__row--jc d-flex">
+	                        <div class="form__row form__row--jc d-flex flex-container">
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt">담당자 성명</div>
 	                                <div class="form__input form__input--w250">
@@ -473,7 +468,7 @@
 	                                <input type="text" id="apply_company" name ="apply_company" placeholder="" />
 	                            </div>
 	                        </div>
-	                        <div class="form__row form__row--jc d-flex">
+	                        <div class="form__row form__row--jc d-flex flex-container">
 	                            <div class="form__col d-flex">
 	                                <div class="form__txt">대표</div>
 	                                <div class="form__input form__input--w120">
@@ -487,7 +482,7 @@
 	                                        <label for="sign" class="d-flex" id="sign_upload" style="cursor:pointer">
 	                                            <input type="file" name="sign" id="sign" class="blind" onchange="readURL(this)" />파일첨부
 	                                        </label>
-	                                        <div id="img_preview" style="display:none;height:40">
+	                                        <div id="img_preview" style="display:none;height:40px;width:80px">
 		                                        <img id="img_view" name="img_view" src="#" alt="인감 이미지" class="sign_img"/>
 		                                        <span class="btn-del" title="삭제" onclick="javascript:img_del()"></span>
 	                                        </div>
@@ -508,11 +503,7 @@
 	    <script>
 	        $(document).ready(function(){
 	        	$('.popupBox').hide();
-	        	/*$('.popup__bg').click(function(){
-	            	if(confirm("저장없이 나가시겠습니까?")) {
-		                $(this).parents('.popupBox').hide();
-	            	}
-	            });*/
+	        	
 	            $('#company_info').click(function(){
 	                $('.popupBox').show();
 	            });
@@ -520,8 +511,66 @@
 	            $('.closeBtn').click(function(){
 	                $('.popupBox').hide();
 	            });
-	            
 	        });
+	        
+	        
+	        $('.data__file').on('change', function() {
+	    		var  str_dotlocation,str_ext,str_low;
+	    		str_value  = this.files[0].name;
+	    		str_low   = str_value.toLowerCase(str_value);
+	    		str_dotlocation = str_low.lastIndexOf(".");
+	    		str_ext   = str_low.substring(str_dotlocation+1);
+	    		
+	    		if (str_ext != "png" && str_ext != "jpg" && str_ext != "gif" && str_ext != "jpeg" && str_ext != "pdf" && str_ext != "hwp" && str_ext != "doc" && str_ext != "docx"   ) {
+	    		     alert("파일 형식이 맞지 않습니다.\n png,jpg,gif,jpeg,pdf,hwp,doc,docx 만\n 업로드가 가능합니다!");
+	    		     return;
+	    		}
+	    		/* 파일 크기 체크 */
+	    		var sz = this.files[0].size;
+	    		
+	    		var idNm = $(this).attr('id');
+	    		
+	    		var formData = new FormData();
+	    		formData.append("fileupload", this.files[0]);
+	    		formData.append("id", idNm);
+	    		
+	    		var this_span = $(this).closest("div").children('.data__fileTxt');
+	    		var this_div = $(this).closest(".data__item");
+	    		
+	    		$.ajax({
+	                type: 'POST',
+	    	        enctype : 'multipart/form-data',
+	                url: 'company_file_save.ajax',
+	                data: formData,
+	    	        dataType : 'text',
+	                processData: false,
+	                contentType: false,
+	                cache : false,
+	                success: function(result){
+			    		$(this_span).html(str_value);
+			    		$(this_span).attr('data-val', result); 
+			    		$(this_span).attr('data-name', str_value); 
+			    		$(this_div).addClass("data__item--complete"); 
+	                }
+	                ,error:function(request,status,error){
+	                	alert('파일 업로드를 실패했습니다. 다시 업로드 해주세요. 계속 실패할 경우 사이트 관리자에 연락해주세요.');
+	                    console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+	                }
+	            });
+	    		
+	    	});
+	        
+	        $('.data__fileTxt').click(function(){
+	        	var value = $(this).attr("data-val");
+	        	var nm = $(this).attr("data-name");
+	        	
+	        	var url = window.location.href;
+	            var idx = url.lastIndexOf("/");
+	            var link = document.createElement("a");
+	            link.download = nm;
+	            link.href = url.substring(0, idx)+"/files/company/"+value;
+	            link.click();
+	    	});
 	        
 	        $('#goPopup').click(function(){
 	        	event.preventDefault();
@@ -638,12 +687,17 @@
 				}
 	    	});
 	    	
+	    	$('#go_next').click(function(){
+	    		$('#menu_no').val('1');
+	        	document.mainform.action = "counsel_contract.do";
+	    		document.mainform.submit();
+	    	});
+	    	
 	    </script>
 	</div>
 
 <jsp:include page="../common/footer.jsp" flush="false" />
 </form>
-	
 </div>
 </body>
 </html>
