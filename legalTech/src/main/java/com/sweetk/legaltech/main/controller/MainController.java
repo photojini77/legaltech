@@ -37,7 +37,7 @@ public class MainController {
 	
 	@RequestMapping("/login.do")
 	protected ModelAndView login_do() {
-		ModelAndView mav = new ModelAndView("login");
+		ModelAndView mav = new ModelAndView("user/login");
 		return mav;
 	}
 	

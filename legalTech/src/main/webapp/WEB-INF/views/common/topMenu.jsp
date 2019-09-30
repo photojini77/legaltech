@@ -20,15 +20,16 @@
 	        </nav>
 	        <div class="header__etc d-flex">
 	        	<c:set value="<%=session.getAttribute(\"userId\") %>" var="user" />
+	        	<c:set value="<%=session.getAttribute(\"userNm\") %>" var="nm" />
 					<c:choose>
 						<c:when test="${fn:length(user) gt 0}">
-				            <span id="login-name">${user}</span>
-					            <a href="" class="logout" id="login-logout">
-					                <img src="./assets/images/icon/logout.png" alt="">
+				            <span id="login-name" style="margin-right: 10px;">${nm}</span>
+					            <a href="javascript:;" class="logout" id="login-logout">
+					                <img src="./assets/images/icon/logout.png" alt="로그아웃" id="logout__img">
 					            </a>
 				        </c:when>
 				    	<c:otherwise>
-				            <a href="" class="etc__link d-flex" id="etc-login">로그인</a>
+				            <a href="./login.do" class="etc__link d-flex" id="etc-login">로그인</a>
 				            <a href="" class="etc__link etc__link--bg d-flex" id="member-login">회원가입</a>
 				    	</c:otherwise>
 				    </c:choose>
@@ -49,9 +50,13 @@
     	if(length-idx == 1 || url.substring(idx,length) == "/main.do") {
     		$('.header').removeClass("header--sub");
     		$('.etc__link').removeClass("etc__link--bgWhite");
+    		$('#login-name').css("color","#fff");
+    		$('#logout__img').attr("src", "./assets/images/icon/logout2.png");
     	} else {
     		$('.header').addClass("header--sub");
     		$('#etc-login').addClass("etc__link--bgWhite");
+    		$('#login-name').css("color","#333");
+    		$('#logout__img').attr("src", "./assets/images/icon/logout.png");
     	}
     });
     
@@ -63,16 +68,31 @@
     	if(value == "1") {
    			document.mainform.action = "counsel_resist.do";
     	} else if(value == "2") {
-   			document.mainform.action = "counsel_resist.do";
+   			document.mainform.action = "legal_lawer.do";
     	} else if(value == "3") {
-   			document.mainform.action = "counsel_resist.do";
+   			document.mainform.action = "customer_center.do";
     	}
-    	
 		document.mainform.submit();
-    	
     });
     
-    
+	$('#logout__img').click(function(){
+		
+		if(confirm("로그아웃 하시겠습니까?")) {
+            $.ajax({
+               type: 'POST',
+               url: 'login_out.do',
+               dataType:"text",
+   				cache: false,
+               success: function(result){
+                   alert("정상적으로 로그아웃 되었습니다.");
+                   location.href="./main.do";
+               },
+               error : function(error) {
+                   alert("정상적으로 로그아웃 되지 않았습니다. 다시 확인해주세요.");
+               }
+           });
+		}
+	});
     
     
 </script>

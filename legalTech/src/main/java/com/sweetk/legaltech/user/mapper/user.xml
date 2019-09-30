@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.sweetk.legaltech.user.mapper.UserMapper">
+	<select id="id_check" parameterType="String" resultType="int">
+		SELECT count(*) FROM it_legal_office WHERE legal_id=#{legal_id}
+	</select>
+	
+	<insert id="member_insert" parameterType="UserVo">
+		INSERT INTO it_legal_office (legal_id, manager_name, email, password, phone, legal_name, ceo_name, reg_no, legal_addr, legal_tel)
+		VALUES (#{legal_id}, #{manager_name}, #{email}, #{password}, #{phone}, #{legal_name}, #{ceo_name}, #{reg_no}, #{legal_addr}, #{legal_tel})
+	</insert>	
+	
+	<select id="company_login_check" parameterType="String" resultType="map">
+		SELECT company_id as id, company_name as name 
+		FROM lt_company
+		WHERE
+			company_id = #{0}
+			and password = password(#{1})
+	</select>
+
+	<select id="legal_login_check" parameterType="String" resultType="map">
+		SELECT legal_id as id, legal_name as name
+		FROM lt_legal_office
+		WHERE
+			legal_id = #{0}
+			and password = password(#{1})
+	</select>
+	
+	
+	
+	
+	</mapper>

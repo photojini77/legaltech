@@ -494,7 +494,8 @@ html, body{
 /* .form__check input.blind{position:relative;} */
 .form__check input[type="checkbox"] + span{width:24px;height:24px;color:#fff;border:1px solid #d8d8d8;margin-right:5px;}
 .form__check input[type="checkbox"]:checked + span{position:relative;}
-.form__check input[type="checkbox"]:checked + span::after{content:'';width:24px;height:24px;background:#FF3F3D;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
+.form__check input[type="checkbox"]:checked + span::after{content:'';width:24px;height:24px;position:absolute;background:url('../images/checked.png') no-repeat center;background-size: 65%;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
+/*background:#FF3F3D;	 */
 
 .form__input--w350{width:350px;-webkit-box-flex:0;-ms-flex:none;flex:none;}
 .form__input--w300{width:300px;-webkit-box-flex:0;-ms-flex:none;flex:none;}
